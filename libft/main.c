@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stddef.h>
 #include "functions.h"
 
 
@@ -35,23 +36,57 @@ int main()
         // int result2 = strlen(string);
         // printf("My function: %d\nReal function: %d\n", result1,result2);
     // FT_MEMSET
-        char buffer[5];
-        char data = 'A';
-        int count = 5;
-        memset(buffer, data, count);
-            for (int i = 0; i <= count; i++)
-                buffer[i] = data;
-            for (int i = 0; i <= count; i++)
-                printf("%c", buffer[i]);
+        // char buffer[5];
+        // char data = 'A';
+        // int count = 5;
+        // memset(buffer, data, count);
+        //     for (int i = 0; i <= count; i++)
+        //         buffer[i] = data;
+        //     for (int i = 0; i <= count; i++)
+        //         printf("%c", buffer[i]);
 
-        printf("\n\n");
-        char buffer1[5];
-        char data1 = 'A';
-        int count1 = 5;
-        memset(buffer1, data1, sizeof(count1));
-            for (int i = 0; i <= count1; i++)
-                buffer1[i] = data1;
-            for (int i = 0; i <= count1; i++)
-                printf("%c", buffer1[i]);
+        // printf("\n\n");
+        // char buffer1[5];
+        // char data1 = 'A';
+        // int count1 = 5;
+        // memset(buffer1, data1, sizeof(count1));
+        //     for (int i = 0; i <= count1; i++)
+        //         buffer1[i] = data1;
+        //     for (int i = 0; i <= count1; i++)
+        //         printf("%c", buffer1[i]);
+    // FT_BZERO
+        // char buffer2[5] = "frank";
+        // int count2 = 0;
+        // printf("My function: \n");
+        //     printf("01%s", buffer2);
+        //     ft_bzero(buffer2, count2);
+        //     printf("\n02%s", buffer2);
+        //     for (int i = 0; i <= count2; i++)
+        //         printf("%c", buffer2[i]);
+        //         printf("\n03%s", buffer2);
+
+        // printf("\n\n");
+
+        // printf("Real function: \n");
+        // char buffer[5] = "frank";
+        // int count = 0;
+        //     printf("01%s", buffer);
+        //     bzero(buffer, count);
+        //     printf("\n02%s", buffer);
+        //     for (int i = 0; i <= count; i++)
+        //         printf("%c", buffer[i]);
+        //         printf("\n03%s", buffer);
+    //FT_TOUPPER
+        // printf("Result Real Function:");
+        // printf("%c", toupper(-1));
+
+        // printf("\nResult My Function:");
+        // printf("%c", ft_toupper(-1));
+    //FT_TOLOWER
+        // printf("Result Real Function:");
+        // printf("%c", tolower('-'));
+
+        // printf("\nResult My Function:");
+        // printf("%c", ft_tolower('-'));
         
 }

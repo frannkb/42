@@ -61,3 +61,38 @@ void *ft_memset(void *b, int c, size_t len)
         pointer[i] = (unsigned char)c;
     return (b);
 }
+
+void    ft_bzero(void *s, size_t n)
+{
+    unsigned char *pointer = (unsigned char *)s;
+
+    while (n > 0)
+    {
+        *pointer = 0;
+        pointer++;
+        n--;
+    }
+}
+
+int ft_toupper(int c)
+{
+    if (c >= 'a' && c <= 'z')
+    {
+        c = c - 32;
+        return (c);
+    }
+    else
+        return (c);
+}
+
+int ft_tolower(int c)
+{
+    if (c >= 'A' && c <= 'Z')
+    {
+        c = c + 32;
+        return (c);
+    }
+    else
+        return (c);
+}
+
