@@ -1,3 +1,4 @@
+void    ft_putchar_fd(char c, int fd);
 
 int ft_isalpha(int c)
 {
@@ -96,3 +97,21 @@ int ft_tolower(int c)
         return (c);
 }
 
+char *ft_strchr(const char *s, int c)
+{
+    int i;
+
+    i = 0;
+    while (s[i] != '\0' && s[i] != c)
+        i++;
+    if (s[i] == c)
+        return ((char *)&s[i]);
+    else
+        return (NULL);
+}
+
+// SECOND PART
+void    ft_putchar_fd(char c, int fd)
+{
+    write(fd, &c, 1);
+}

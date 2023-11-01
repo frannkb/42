@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stddef.h>
+#include <unistd.h>
 #include "functions.h"
 
 
@@ -88,5 +89,19 @@ int main()
 
         // printf("\nResult My Function:");
         // printf("%c", ft_tolower('-'));
-        
+    //FT_STRCHR
+        const char *str = "Hello Word!";
+        int ch = '!';
+        char *result = strchr(str, ch);
+
+        printf("%s", result);
+    
+        printf("\n\n");
+
+        const char *str2 = "Hello Word!";
+        int ch2 = '!';
+        char *result2 = ft_strchr(str2, ch2);
+
+        printf("%s", result2);
+
 }
