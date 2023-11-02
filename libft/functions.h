@@ -52,15 +52,15 @@ size_t  ft_strlen(const char *s)
     return (lenght);
 }
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *str, int c, size_t len)
 {
-    unsigned char *pointer = b;
+    unsigned char *pointer = str;
     size_t i;
 
     i = 0;
     while(i < len)
         pointer[i] = (unsigned char)c;
-    return (b);
+    return (str);
 }
 
 void    ft_bzero(void *s, size_t n)
@@ -110,7 +110,32 @@ char *ft_strchr(const char *s, int c)
         return (NULL);
 }
 
-// SECOND PART
+void    *ft_memcpy(void *dst, const void *src, size_t n)
+{
+    const unsigned char *source = src;
+    unsigned char *destination = dst;
+
+    while (n--)
+        *destination++ = *source++;
+    return (dst);
+}
+
+void    *ft_memmove(void *dst, const void *src, size_t len)
+{
+    unsigned char *destination = dst;
+    const unsigned char *source = src;
+    size_t i;
+
+    i = 0;
+    while (destination[i] < len)
+    {
+        destination[i] = source[i];
+        i++;
+    }
+    return (dst);
+}
+
+// SECOND PART >> fd = File Descriptor
 void    ft_putchar_fd(char c, int fd)
 {
     write(fd, &c, 1);

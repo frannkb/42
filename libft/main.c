@@ -90,18 +90,57 @@ int main()
         // printf("\nResult My Function:");
         // printf("%c", ft_tolower('-'));
     //FT_STRCHR
-        const char *str = "Hello Word!";
-        int ch = '!';
-        char *result = strchr(str, ch);
-
-        printf("%s", result);
+        // const char *str = "Hello Word!";
+        // int ch = '!';
+        // char *result = strchr(str, ch);
+        // printf("%s", result);
     
+        // printf("\n\n");
+
+        // const char *str2 = "Hello Word!";
+        // int ch2 = '!';
+        // char *result2 = ft_strchr(str2, ch2);
+        // printf("%s", result2);
+    //FT_MEMCPY
+        // printf("Real function:\n");
+        // char src[] = "Hello Word!";
+        // char dest[sizeof(src)];
+        // size_t n = sizeof(src); // size_t = sizeof(src) pega o tamanho do array src
+        
+        // memcpy(dest,src,n);
+        // printf("%s\n", dest);
+        // printf("%s\n", src);
+        // printf("%zu\n", n);
+
+
+        // printf("\n");
+        // printf("My function:\n");
+        // char src1[] = "Hello Word!";
+        // char dest1[sizeof(src1)];
+        // size_t n1 = sizeof(src1); // size_t = sizeof(src) pega o tamanho do array src
+        
+        // ft_memcpy(dest1,src1,n1);
+        // printf("%s\n", dest1);
+        // printf("%s\n", src1);
+        // printf("%zu\n", n1);
+    //FT_MEMMOVE
+        printf("Real function:\n");
+        char *src = "Hello Word!";
+        char dst[9];
+        size_t number = sizeof(dst);
+
+        memmove(dst + 2,src,9);
+
+        printf("%s", dst);
+
         printf("\n\n");
+        printf("My function:\n");
+        char *src1 = "Hello Word!";
+        char dst1[9];
+        size_t number1 = sizeof(dst1);
 
-        const char *str2 = "Hello Word!";
-        int ch2 = '!';
-        char *result2 = ft_strchr(str2, ch2);
+        ft_memmove(dst1,src1,9);
 
-        printf("%s", result2);
+        printf("%s", dst1);
 
 }
