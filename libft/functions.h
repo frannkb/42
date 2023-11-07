@@ -112,31 +112,107 @@ char *ft_strchr(const char *s, int c)
 
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    const unsigned char *source = src;
-    unsigned char *destination = dst;
+    char    *source;
+    char    *destination;
 
-    while (n--)
+    source = (char *)src;
+    destination = (char *)dst;
+    if(!dst && !src)
+        return (dst);
+    while(n--)
         *destination++ = *source++;
     return (dst);
 }
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void    *ft_memmove(void *dst, const void *src, size_t n)
 {
-    unsigned char *destination = dst;
-    const unsigned char *source = src;
-    size_t i;
+    char    *tmp;
+    char    *dest;
 
-    i = 0;
-    while (destination[i] < len)
+    tmp = (char *)src;
+    dest = (char *)dst;
+    if(tmp < dest)
     {
-        destination[i] = source[i];
-        i++;
+        while (n--)
+            dest[n] = tmp[n];
     }
+    else
+        ft_memcpy(dest, tmp, n);
     return (dst);
+
 }
+
+    static  int ft_isspace(int c)
+    {
+        if (c == '\v' || c == '\n' || c == '\t' ||
+		    c == '\r' || c == '\f' || c == ' ')
+		    return (1);
+	    return (0);
+    }
+
+int ft_atoi(const char *str)
+{
+    int sign;
+    int result;
+
+    sign = 1;
+    result = 0;
+    while (ft_isspace(*str))
+        str++;
+    if(*str == '+' || *str == '-')
+    {
+        if(*str == '-')
+            sign *= -1;
+        str++;
+    }
+    while (ft_isdigit(*str))
+        result = result * 10 + (*(str++) - 48);
+    return (result * sign);
+}
+
 
 // SECOND PART >> fd = File Descriptor
 void    ft_putchar_fd(char c, int fd)
 {
     write(fd, &c, 1);
+}
+
+void    ft_putnbr_fd(int n, int fd)
+{
+    unsigned int num;
+
+    num = n;
+    if (n < 0)
+    {
+        ft_putchar_fd('-', fd);
+        num = (unsigned int)(n * -1);
+    }
+    if (n > 9)
+        ft_putnbr_fd(num / 10, fd);
+    ft_putchar_fd((char)(num % 10 + '0'), fd);
+}
+
+void    ft_putstr_fd(char *s, int fd)
+{
+    // int i;
+
+    // i = 0;
+    // while (s[i] != '\0')
+    // {
+    //     ft_putchar_fd(s[i], fd);
+    //     i++;
+    // }
+    if(s)
+        write(fd, s, ft_strlen(s));
+}
+
+void    ft_putendl_fd(char *s, int fd)
+{
+    if(!s)
+        return ;
+    if(s)
+    {
+        write(fd, s, ft_strlen(s));
+        write(fd, "\n", 1);
+    }
 }
