@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: frankb <frankb@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fbruno-s <fbruno-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:11:17 by fbruno-s          #+#    #+#             */
-/*   Updated: 2023/11/05 16:26:13 by frankb           ###   ########.fr       */
+/*   Updated: 2023/11/18 18:23:33 by fbruno-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 */
 
 int	ft_isalpha(int c);
+int ft_isdigit(int c);
+int ft_isalnum(int c);
 
 /*
 ** Adictional function part 2 - Libc functions

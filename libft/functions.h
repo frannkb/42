@@ -1,44 +1,54 @@
 void    ft_putchar_fd(char c, int fd);
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        return (1);
-    else
-        return (0);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return (1);
-    else
-        return (0);
+	return (c >= 48 && c <= 57);
 }
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-        return (1);
-    else
-        return (0);
+	return ((ft_isalpha(c)) || (ft_isdigit(c)));
 }
 
 int ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    else
-        return (0);
+    return (c >= 0 && c <= 127);
 }
 
 int ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    else 
-        return (0);
+    return (c >= 32 && c <= 126);
 }
+
+int ft_toupper(int c)
+{
+    if (c >= 'a' && c <= 'z')
+        return (c - 32);
+    return (c);
+}
+
+int ft_tolower(int c)
+{
+    if (c >= 'A' && c <= 'Z')
+        return (c + 32);
+    return (c);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 size_t  ft_strlen(const char *s)
 {
@@ -75,27 +85,7 @@ void    ft_bzero(void *s, size_t n)
     }
 }
 
-int ft_toupper(int c)
-{
-    if (c >= 'a' && c <= 'z')
-    {
-        c = c - 32;
-        return (c);
-    }
-    else
-        return (c);
-}
 
-int ft_tolower(int c)
-{
-    if (c >= 'A' && c <= 'Z')
-    {
-        c = c + 32;
-        return (c);
-    }
-    else
-        return (c);
-}
 
 char *ft_strchr(const char *s, int c)
 {
