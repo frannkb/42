@@ -56,15 +56,15 @@ int main()
         //     for (int i = 0; i <= count1; i++)
         //         printf("%c", buffer1[i]);
     // FT_BZERO
-        // char buffer2[5] = "frank";
-        // int count2 = 0;
-        // printf("My function: \n");
-        //     printf("01%s", buffer2);
-        //     ft_bzero(buffer2, count2);
-        //     printf("\n02%s", buffer2);
-        //     for (int i = 0; i <= count2; i++)
-        //         printf("%c", buffer2[i]);
-        //         printf("\n03%s", buffer2);
+         char buffer2[5] = "frank";
+         int count2 = 0;
+         printf("My function: \n");
+             printf("01%s", buffer2);
+             ft_bzero(buffer2, count2);
+             printf("\n02%s", buffer2);
+             for (int i = 0; i <= count2; i++)
+                 printf("%c", buffer2[i]);
+                 printf("\n03%s", buffer2);
 
         // printf("\n\n");
 
@@ -94,7 +94,7 @@ int main()
         // int ch = '!';
         // char *result = strchr(str, ch);
         // printf("%s", result);
-    
+
         // printf("\n\n");
 
         // const char *str2 = "Hello Word!";
@@ -106,7 +106,7 @@ int main()
         // char src[] = "Hello Word!";
         // char dest[sizeof(src)];
         // size_t n = sizeof(src); // size_t = sizeof(src) pega o tamanho do array src
-        
+
         // memcpy(dest,src,n);
         // printf("%s\n", dest);
         // printf("%s\n", src);
@@ -118,7 +118,7 @@ int main()
         // char src1[] = "Hello Word!";
         // char dest1[sizeof(src1)];
         // size_t n1 = sizeof(src1); // size_t = sizeof(src) pega o tamanho do array src
-        
+
         // ft_memcpy(dest1,src1,n1);
         // printf("%s\n", dest1);
         // printf("%s\n", src1);

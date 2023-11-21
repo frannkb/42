@@ -1,11 +1,20 @@
-void    ft_bzero(void *s, size_t n)
-{
-    unsigned char *pointer = (unsigned char *)s;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fbruno-s <fbruno-s@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/21 19:32:18 by fbruno-s          #+#    #+#             */
+/*   Updated: 2023/11/21 20:06:48 by fbruno-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    while (n > 0)
-    {
-        *pointer = 0;
-        pointer++;
-        n--;
-    }
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*pointer;
+
+	pointer = (unsigned char *)s;
+	while (n-- > 0)
+		*(pointer++) = '\0';
 }
