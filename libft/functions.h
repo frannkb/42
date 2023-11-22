@@ -1,5 +1,3 @@
-void    ft_putchar_fd(char c, int fd);
-
 int	ft_isalpha(int c)
 {
 	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
@@ -39,99 +37,6 @@ int ft_tolower(int c)
     return (c);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-size_t  ft_strlen(const char *s)
-{
-    size_t lenght;
-
-    lenght = 0;
-    while (s[lenght] != '\0')
-    {
-        lenght++;
-    }
-    return (lenght);
-}
-
-void *ft_memset(void *str, int c, size_t len)
-{
-    unsigned char *pointer = str;
-    size_t i;
-
-    i = 0;
-    while(i < len)
-        pointer[i] = (unsigned char)c;
-    return (str);
-}
-
-void    ft_bzero(void *s, size_t n)
-{
-    unsigned char *pointer = (unsigned char *)s;
-
-    while (n > 0)
-    {
-        *pointer = 0;
-        pointer++;
-        n--;
-    }
-}
-
-
-
-char *ft_strchr(const char *s, int c)
-{
-    int i;
-
-    i = 0;
-    while (s[i] != '\0' && s[i] != c)
-        i++;
-    if (s[i] == c)
-        return ((char *)&s[i]);
-    else
-        return (NULL);
-}
-
-void    *ft_memcpy(void *dst, const void *src, size_t n)
-{
-    char    *source;
-    char    *destination;
-
-    source = (char *)src;
-    destination = (char *)dst;
-    if(!dst && !src)
-        return (dst);
-    while(n--)
-        *destination++ = *source++;
-    return (dst);
-}
-
-void    *ft_memmove(void *dst, const void *src, size_t n)
-{
-    char    *tmp;
-    char    *dest;
-
-    tmp = (char *)src;
-    dest = (char *)dst;
-    if(tmp < dest)
-    {
-        while (n--)
-            dest[n] = tmp[n];
-    }
-    else
-        ft_memcpy(dest, tmp, n);
-    return (dst);
-
-}
-
     static  int ft_isspace(int c)
     {
         if (c == '\v' || c == '\n' || c == '\t' ||
@@ -160,49 +65,186 @@ int ft_atoi(const char *str)
     return (result * sign);
 }
 
-
-// SECOND PART >> fd = File Descriptor
-void    ft_putchar_fd(char c, int fd)
+void	ft_bzero(void *s, size_t n)
 {
-    write(fd, &c, 1);
+	unsigned char	*pointer;
+
+	pointer = (unsigned char *)s;
+	while (n-- > 0)
+		*(pointer++) = '\0';
 }
 
-void    ft_putnbr_fd(int n, int fd)
+size_t	ft_strlen(const char *s)
 {
-    unsigned int num;
+	size_t	size;
 
-    num = n;
-    if (n < 0)
-    {
-        ft_putchar_fd('-', fd);
-        num = (unsigned int)(n * -1);
-    }
-    if (n > 9)
-        ft_putnbr_fd(num / 10, fd);
-    ft_putchar_fd((char)(num % 10 + '0'), fd);
+	size = 0;
+	while (s[size] != '\0')
+		size++;
+	return (size);
 }
 
-void    ft_putstr_fd(char *s, int fd)
-{
-    // int i;
+//void *ft_memset(void *str, int c, size_t len)
+//{
+//    unsigned char *pointer = str;
+//    size_t i;
 
-    // i = 0;
-    // while (s[i] != '\0')
-    // {
-    //     ft_putchar_fd(s[i], fd);
-    //     i++;
-    // }
-    if(s)
-        write(fd, s, ft_strlen(s));
-}
+//    i = 0;
+//    while(i < len)
+//        pointer[i] = (unsigned char)c;
+//    return (str);
+//}
 
-void    ft_putendl_fd(char *s, int fd)
-{
-    if(!s)
-        return ;
-    if(s)
-    {
-        write(fd, s, ft_strlen(s));
-        write(fd, "\n", 1);
-    }
-}
+//char *ft_strchr(const char *s, int c)
+//{
+//    int i;
+
+//    i = 0;
+//    while (s[i] != '\0' && s[i] != c)
+//        i++;
+//    if (s[i] == c)
+//        return ((char *)&s[i]);
+//    else
+//        return (NULL);
+//}
+
+//void    *ft_memcpy(void *dst, const void *src, size_t n)
+//{
+//    char    *source;
+//    char    *destination;
+
+//    source = (char *)src;
+//    destination = (char *)dst;
+//    if(!dst && !src)
+//        return (dst);
+//    while(n--)
+//        *destination++ = *source++;
+//    return (dst);
+//}
+
+//void    *ft_memmove(void *dst, const void *src, size_t n)
+//{void *ft_memset(void *str, int c, size_t len)
+//{
+//    unsigned char *pointer = str;
+//    size_t i;
+
+//    i = 0;
+//    while(i < len)
+//        pointer[i] = (unsigned char)c;
+//    return (str);
+//}
+
+//char *ft_strchr(const char *s, int c)
+//{
+//    int i;
+
+//    i = 0;
+//    char    *tmp;
+//    char    *dest;
+
+//    tmp = (char *)src;
+//    dest = (char *)dst;
+//    if(tmp < dest)
+//    {
+//        while (n--)
+//            dest[n] = void *ft_memset(void *str, int c, size_t len)
+//{
+//    unsigned char *pointer = str;
+//    size_t i;
+
+//    i = 0;
+//    while(i < len)
+//        pointer[i] = (unsigned char)c;
+//    return (str);
+//}
+
+//char *ft_strchr(const char *s, int c)
+//{
+//    int i;void *ft_memset(void *str, int c, size_t len)
+//{
+//    unsigned char *pointer = str;
+//    size_t i;
+
+//    i = 0;
+//    while(i < len)
+//        pointer[i] = (unsigned char)c;
+//    return (str);
+//}
+
+//char *ft_strchr(const char *s, int c)
+//{
+//    int i;
+
+//    i = 0;
+
+//    i = 0;tmp[n];
+//    }
+//    elsevoid *ft_memset(void *str, int c, size_t len)
+//{
+//    unsigned char *pointer = str;
+//    size_t i;
+
+//    i = 0;
+//    while(i < len)
+//        pointer[i] = (unsigned char)c;
+//    return (str);
+//}
+
+//char *ft_strchr(const char *s, int c)
+//{
+//    int i;
+
+//    i = 0;
+//        ft_memcpy(dest, tmp, n);
+//    return (dst);
+
+//}
+
+
+
+
+//// SECOND PART >> fd = File Descriptor
+//void    ft_putchar_fd(char c, int fd)
+//{
+//    write(fd, &c, 1);
+//}
+
+//void    ft_putnbr_fd(int n, int fd)
+//{
+//    unsigned int num;
+
+//    num = n;
+//    if (n < 0)
+//    {
+//        ft_putchar_fd('-', fd);
+//        num = (unsigned int)(n * -1);
+//    }
+//    if (n > 9)
+//        ft_putnbr_fd(num / 10, fd);
+//    ft_putchar_fd((char)(num % 10 + '0'), fd);
+//}
+
+//void    ft_putstr_fd(char *s, int fd)
+//{
+//    // int i;
+
+//    // i = 0;
+//    // while (s[i] != '\0')
+//    // {
+//    //     ft_putchar_fd(s[i], fd);
+//    //     i++;
+//    // }
+//    if(s)
+//        write(fd, s, ft_strlen(s));
+//}
+
+//void    ft_putendl_fd(char *s, int fd)
+//{
+//    if(!s)
+//        return ;
+//    if(s)
+//    {
+//        write(fd, s, ft_strlen(s));
+//        write(fd, "\n", 1);
+//    }
+//}

@@ -32,10 +32,12 @@ int main()
         // int result2 = isprint(-1);
         // printf("My function: %d\nReal Function:%d\n", result1, result2);
     // FT_STRLEN
-        // const char *string = "Hello Word!";
-        // int result1 = ft_strlen(string);
-        // int result2 = strlen(string);
-        // printf("My function: %d\nReal function: %d\n", result1,result2);
+         const char *string = "Hello Word!";
+         size_t result1;
+         result1 = ft_strlen1(string);
+         size_t result2 ;
+         result2 = strlen(string);
+         printf("My function: %d\nReal function: %d\n", result1,result2);
     // FT_MEMSET
         // char buffer[5];
         // char data = 'A';
@@ -56,15 +58,15 @@ int main()
         //     for (int i = 0; i <= count1; i++)
         //         printf("%c", buffer1[i]);
     // FT_BZERO
-         char buffer2[5] = "frank";
-         int count2 = 0;
-         printf("My function: \n");
-             printf("01%s", buffer2);
-             ft_bzero(buffer2, count2);
-             printf("\n02%s", buffer2);
-             for (int i = 0; i <= count2; i++)
-                 printf("%c", buffer2[i]);
-                 printf("\n03%s", buffer2);
+        // char buffer2[5] = "frank";
+        // int count2 = 0;
+        // printf("My function: \n");
+        //     printf("01%s", buffer2);
+        //     ft_bzero(buffer2, count2);
+        //     printf("\n02%s", buffer2);
+        //     for (int i = 0; i <= count2; i++)
+        //         printf("%c", buffer2[i]);
+        //         printf("\n03%s", buffer2);
 
         // printf("\n\n");
 
@@ -124,23 +126,22 @@ int main()
         // printf("%s\n", src1);
         // printf("%zu\n", n1);
     //FT_MEMMOVE
-        printf("Real function:\n");
-        char *src = "Hello Word!";
-        char dst[9];
-        size_t number = sizeof(dst);
+        //printf("Real function:\n");
+        //char *src = "Hello Word!";
+        //char dst[9];
+        //size_t number = sizeof(dst);
 
-        memmove(dst + 2,src,9);
+        //memmove(dst + 2,src,9);
 
-        printf("%s", dst);
+        //printf("%s", dst);
 
-        printf("\n\n");
-        printf("My function:\n");
-        char *src1 = "Hello Word!";
-        char dst1[9];
-        size_t number1 = sizeof(dst1);
+        //printf("\n\n");
+        //printf("My function:\n");
+        //char *src1 = "Hello Word!";
+        //char dst1[9];
+        //size_t number1 = sizeof(dst1);
 
-        ft_memmove(dst1,src1,9);
+        //ft_memmove(dst1,src1,9);
 
-        printf("%s", dst1);
-
+        //printf("%s", dst1);
 }

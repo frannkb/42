@@ -1,11 +1,21 @@
-size_t  ft_strlen(const char *s)
-{
-    size_t lenght;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fbruno-s <fbruno-s@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/21 20:51:20 by fbruno-s          #+#    #+#             */
+/*   Updated: 2023/11/21 21:05:02 by fbruno-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    lenght = 0;
-    while (s[lenght] != '\0')
-    {
-        lenght++;
-    }
-    return (lenght);
+size_t	ft_strlen(const char *s)
+{
+	size_t	size;
+
+	size = 0;
+	while (s[size] != '\0')
+		size++;
+	return (size);
 }
