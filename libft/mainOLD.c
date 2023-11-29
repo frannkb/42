@@ -32,12 +32,19 @@ int main()
         // int result2 = isprint(-1);
         // printf("My function: %d\nReal Function:%d\n", result1, result2);
     // FT_STRLEN
-         const char *string = "Hello Word!";
-         size_t result1;
-         result1 = ft_strlen1(string);
-         size_t result2 ;
-         result2 = strlen(string);
-         printf("My function: %d\nReal function: %d\n", result1,result2);
+        //  const char *string = "Hello Word!";
+        //  size_t result1;
+        //  result1 = ft_strlen1(string);
+        //  size_t result2 ;
+        //  result2 = strlen(string);
+        //  printf("My function: %d\nReal function: %d\n", result1,result2);
+    // FT_STRLCPY
+        // char *name = "frank";
+        // char dst[5];
+        // int n = ft_strlcpy(dst, name, 0);
+        // printf("%d", n);
+        // printf("\n%s", name);
+        // printf("\n%s", dst);
     // FT_MEMSET
         // char buffer[5];
         // char data = 'A';
