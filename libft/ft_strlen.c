@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbruno-s <fbruno-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frankb <frankb@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 20:51:20 by fbruno-s          #+#    #+#             */
-/*   Updated: 2023/11/21 21:05:02 by fbruno-s         ###   ########.fr       */
+/*   Updated: 2023/11/29 21:37:34 by frankb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	size;
+	size_t	length;
 
-	size = 0;
-	while (s[size] != '\0')
-		size++;
-	return (size);
+	length = 0;
+	while (s[length] != '\0')
+		length++;
+	return (length);
 }

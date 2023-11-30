@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbruno-s <fbruno-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: frankb <frankb@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:11:17 by fbruno-s          #+#    #+#             */
-/*   Updated: 2023/11/18 18:23:33 by fbruno-s         ###   ########.fr       */
+/*   Updated: 2023/11/29 21:33:39 by frankb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <string.h> // for size_t
+#include <stddef.h> // For NULL
 /*
 ** Mandatory part 1 - Libc functions
 */

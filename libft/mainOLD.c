@@ -99,17 +99,17 @@ int main()
         // printf("\nResult My Function:");
         // printf("%c", ft_tolower('-'));
     //FT_STRCHR
-        // const char *str = "Hello Word!";
-        // int ch = '!';
-        // char *result = strchr(str, ch);
-        // printf("%s", result);
+        // const char *str = "Hello World!";
+        // char target_char = 'W';
 
-        // printf("\n\n");
+        // char *result = ft_strchr(str, target_char);
 
-        // const char *str2 = "Hello Word!";
-        // int ch2 = '!';
-        // char *result2 = ft_strchr(str2, ch2);
-        // printf("%s", result2);
+        // if (result != 0) {
+        //     printf("Character '%c' found at position: %ld\n", target_char, result - str);
+        // } else {
+        //     printf("Character '%c' not found in the string.\n", target_char);
+        //     printf("Character '%s' not found in the string.\n", result);
+        // }
     //FT_MEMCPY
         // printf("Real function:\n");
         // char src[] = "Hello Word!";
