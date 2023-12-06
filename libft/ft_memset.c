@@ -1,10 +1,9 @@
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *str, int c, size_t len)
 {
-    unsigned char *pointer = b;
-    size_t i;
+	unsigned char	*string;
 
-    i = 0;
-    while(i < len)
-        pointer[i] = (unsigned char)c;
-    return (b);
+	string = (unsigned char*)str;
+	while (len-- > 0)
+		*(string++) = (unsigned char)c;
+	return (str);
 }
