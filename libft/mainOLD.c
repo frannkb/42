@@ -110,45 +110,79 @@ int main()
         //     printf("Character '%c' not found in the string.\n", target_char);
         //     printf("Character '%s' not found in the string.\n", result);
         // }
+    //FT_STRRCHR
+        // const char	*name = "Frank Brunro";
+        // char	ch = 'r';
+
+        // char *n = ft_strrchr(name, ch);
+        // printf("%s\n", n);
+        // printf("%s\n", name);
+        // printf("%c\n", ch);
+    //FT_STRNCMP
+        // char	*s1 = "FRANK";
+        // char	*s2 = "BRUNO";
+
+        // int n = ft_strncmp(s1,s2,0);
+
+        // printf("%s\n", s1);
+        // printf("%s\n", s2);
+        // printf("%d\n", n);
+    //FT_STRNSTR
+        // const char *haystack = "Hello, World!";
+        // const char *needle1 = "World";
+        // const char *needle2 = ", ";
+        // const char *needle3 = "";  // Empty string as a needle
+        // size_t len = strlen(haystack);
+
+        // // Test case 1: Search for "World" in "Hello, World!"
+        // char *result1 = ft_strnstr(haystack, needle1, len);
+        // printf("Result 1: %s\n", result1 ? result1 : "Not found");
+
+        // // Test case 2: Search for "foo" in "Hello, World!"
+        // char *result2 = ft_strnstr(haystack, needle2, len);
+        // printf("Result 2: %s\n", result2 ? result2 : "Not found");
+
+        // // Test case 3: Search for an empty string in "Hello, World!"
+        // char *result3 = ft_strnstr(haystack, needle3, len);
+        // printf("Result 3: %s\n", result3 ? result3 : "Not found");
     //FT_MEMCPY
-        // printf("Real function:\n");
-        // char src[] = "Hello Word!";
-        // char dest[sizeof(src)];
-        // size_t n = sizeof(src); // size_t = sizeof(src) pega o tamanho do array src
+        // char source[] = "Hello, World!"; // 13 characteres
+        // char destination[20];  // Make sure the destination buffer is large enough
 
-        // memcpy(dest,src,n);
-        // printf("%s\n", dest);
-        // printf("%s\n", src);
-        // printf("%zu\n", n);
+        // // Test case 1: Copy the entire string
+        // ft_memcpy(destination, source, strlen(source) + 1);
+        // printf("Result 1: %s\n", destination);
 
+        // // Test case 2: Copy a portion of the string
+        // ft_memcpy(destination, source + 7, 5);  // Copy "World" from source
+        // printf("Result 2: %s\n", destination);
 
-        // printf("\n");
-        // printf("My function:\n");
-        // char src1[] = "Hello Word!";
-        // char dest1[sizeof(src1)];
-        // size_t n1 = sizeof(src1); // size_t = sizeof(src) pega o tamanho do array src
+        // // Test case 3: Copy from a null source (should not crash)
+        // ft_memcpy(destination, 0, 5);
+        // printf("Result 3: %s\n", destination);
 
-        // ft_memcpy(dest1,src1,n1);
-        // printf("%s\n", dest1);
-        // printf("%s\n", src1);
-        // printf("%zu\n", n1);
+        // // Test case 4: Copy to a null destination (should not crash)
+        // ft_memcpy(NULL, source, strlen(source) + 1);
+        // printf("Result 4: %s\n", destination);
     //FT_MEMMOVE
-        //printf("Real function:\n");
-        //char *src = "Hello Word!";
-        //char dst[9];
-        //size_t number = sizeof(dst);
+        // char buffer[20];
 
-        //memmove(dst + 2,src,9);
+        // // Test case 1: Non-overlapping regions
+        // const char *source1 = "Hello, World!"; //13
+        // ft_memmove(buffer, source1, strlen(source1) + 1);
+        // printf("Result 1: %s\n", buffer);
 
-        //printf("%s", dst);
+        // // Test case 2: Overlapping regions (source before destination)
+        // const char *source2 = buffer + 6;  // Copying "World" from buffer to buffer
+        // ft_memmove(buffer, source2, 5);
+        // printf("Result 2: %s\n", buffer);
 
-        //printf("\n\n");
-        //printf("My function:\n");
-        //char *src1 = "Hello Word!";
-        //char dst1[9];
-        //size_t number1 = sizeof(dst1);
+        // // Test case 3: Overlapping regions (destination before source)
+        // const char *source3 = buffer;
+        // ft_memmove(buffer + 6, source3, 5);
+        // printf("Result 3: %s\n", buffer);
 
-        //ft_memmove(dst1,src1,9);
-
-        //printf("%s", dst1);
+        // // Test case 4: Overlapping regions with a null pointer (testing for safety)
+        // ft_memmove(NULL, buffer, 5);
+        // ft_memmove(buffer, NULL, 5);
 }
